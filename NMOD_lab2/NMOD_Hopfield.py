@@ -40,13 +40,13 @@ def async_method(y_noisy, W, y_original, enable_print=False):
                 print(f"y_model({j+1:02}) = [{" ".join(f" {x} " if i != j else f"({x})" for i, x in enumerate(y_noisy))}]")
             if np.array_equal(y_in, y_noisy):
                 if np.array_equal(y_in, y_original):
-                    print(f"y_stage_{i + 1} == y_original, relaxation with correct value")
+                    print(f"y_stage_{i+1} == y_original, relaxation with correct value")
                     return True
                 else:
                     print(f"y_stage_{i+1} == y_stage_{i} != y_original, relaxation with wrong value")
                     return False
             else:
-                print(f"y_stage{i+1} != y_original, continue calculation")
+                print(f"y_stage{i+1} != y_stage{i}, continue calculation")
         print(f"model can’t find relaxation, max iteration = {max_nn_algorithm_iteration}")
         return False
 
