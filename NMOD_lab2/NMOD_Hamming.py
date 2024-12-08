@@ -24,9 +24,6 @@ e = 1 / n
 def ReLU(s):
     return np.array([max(0, x) for x in s])
 
-def sign(x):
-    return np.array([1 if el > 0 else 0 for el in x])
-
 def make_bits_noisy(y, bits_count):
     noisy_positions = random.sample(range(len(y)), bits_count)
     y_noisy = y.copy()
