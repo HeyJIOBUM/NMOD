@@ -129,21 +129,6 @@ def main():
     print("Y:", measurements_output_y)
     print("X:", measurements_output_x)
 
-    # print("\nBi-directional find X:")
-    # for i, y_i in enumerate(Y):
-    #     print(f"\ny_{i + 1}:")
-    #     for j in range(1, len(Y[i])+1):
-    #         print(f"y_{i+1} with {j:02} noisy bit{" " if j == 1 else "s"} -> ",
-    #               calculate_x(make_bits_noisy(y_i, j), W, y_i))
-    #
-    # print("\nBi-directional find Y:")
-    # for i, x_i in enumerate(X):
-    #     print(f"\nx_{i+1}:")
-    #     for j in range(1, len(Y[i])+1):
-    #         print(f"x_{i+1} with {j:02} noisy bit{" " if j == 1 else "s"} -> ",
-    #               calculate_y(make_bits_noisy(x_i, j), W, x_i))
-
-    pass
 
 if __name__ == '__main__':
     main()
